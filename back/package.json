@@ -1,22 +1,21 @@
 {
-  "name": "pwa-news-api",
+  "name": "server",
   "version": "1.0.0",
-  "description": "api pwa news",
-  "main": "index.js",
+  "description": "",
+  "main": "index.mjs",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --experimental-json-modules src/index.mjs",
+    "start": "node --experimental-json-modules src/app.mjs",
+    "dev": "nodemon --experimental-json-modules src/app.mjs",
+    "build": "mkdir -p build && cp -R node_modules src/* build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.12.12",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "nodemon": "^2.0.4"
   }
 }
